@@ -1,0 +1,19 @@
+# Public management repo: ignore everything except explicitly reviewed files.
+*
+!*/
+!/.gitattributes
+!/.gitignore
+!/README.md
+!/AGENTS.md
+!/Fusion-360/AGENTS.md
+!/Fusion-360/runtime-scope.md
+!/Rhino/AGENTS.md
+!/SolidWorks/AGENTS.md
+!/Blender/AGENTS.md
+!/SolidWorks/skills/solidworks-design/SKILL.md
+!/SolidWorks/skills/solidworks-design/agents/openai.yaml
+!/SolidWorks/skills/solidworks-design/references/com-fallback.md
+!/SolidWorks/skills/solidworks-design/references/delivery-checklist.md
+!/SolidWorks/skills/solidworks-design/references/parametric-sketches.md
+!/SolidWorks/skills/solidworks-design/references/cnc-engraving.md
+!/SolidWorks/skills/solidworks-design/references/fdm-gripper.md

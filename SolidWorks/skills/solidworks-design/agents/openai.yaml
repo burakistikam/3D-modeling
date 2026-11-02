@@ -1,0 +1,4 @@
+interface:
+  display_name: "SolidWorks Design"
+  short_description: "Design and validate SolidWorks parts and assemblies"
+  default_prompt: "Use $solidworks-design to create or review this SolidWorks design."
