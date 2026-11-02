@@ -65,3 +65,33 @@ Ortak kurallar burada, uygulamaya özgü ayrıntılar ilgili klasörde tutulur.
   bilgi yayımlamayın.
 - Bu repo belgelerini kurmak veya sync etmek; CAD uygulamasını değiştirme, dışarıya
   mesaj gönderme, müşteri dosyası yükleme veya ek izin verme yetkisi değildir.
+
+## Geliştirme sonunda GitHub senkronizasyonu
+
+Kullanıcı, Codex ile tamamlanan her geliştirmede bu public repo kapsamındaki
+değişikliklerin kontrol edilip GitHub'a gönderilmesini istemiştir. Bu kapsam için
+yeniden onay istemeyin; kullanıcının güncel durdurma veya paylaşmama talebi önceliklidir.
+
+1. Görev sonunda değişen paylaşılabilir genel kuralları ve skill içeriğini belirleyin.
+   Kaynak başka bir çalışma alanındaysa yalnız ilgili değişikliği public sürüme
+   uyarlayın. Görevden yeni kalıcı tercih türetmeyin, klasörleri topluca kopyalamayın.
+2. Bu repo kökünde hedefi doğrulayın: `origin`, README'deki public GitHub reposu
+   olmalı. Kaynak CAD reposunun remote'unu değiştirmeyin ve oradan public push yapmayın.
+3. `git status` ve `git fetch origin` ile yerel/uzak durumu inceleyin. Başka kişilerin
+   bekleyen değişikliklerini koruyun. Uzak değişiklikleri kayıpsız bütünleştirin;
+   belirsiz çakışmada durumu bildirin. Force push veya veri kaybettiren reset yapmayın.
+4. Yalnız izin listesindeki ilgili dosyaları açık yollarla stage edin. Dosyaların
+   tamamını, staged diff'i ve gönderilecek tüm yerel commit'lerin içerik/metadata'sını
+   özel bilgi açısından inceleyin. Yalnız dosya uzantısı veya regex taraması yeterli değildir.
+5. Markdown bağlantılarını, diff biçimini ve değişen skill'in doğrulamasını kontrol
+   edin. CAD çıktıları, özel veriler veya incelenmemiş değişiklik varsa yayımlamayın.
+6. GitHub kullanıcı adı ve hesabın noreply e-postasıyla anlamlı bir commit oluşturun.
+   İncelenen değişiklikleri `main` dalına normal push ile gönderin. Public içerikte
+   değişiklik yoksa boş commit oluşturmayın.
+7. Yerel HEAD ile uzak `refs/heads/main` kimliğini karşılaştırın. Yalnız eşleşiyorsa
+   senkronizasyon tamamlandı deyin. Bağlantı, yetki veya çakışma nedeniyle gönderilemeyen
+   değişiklikleri koruyun ve kullanıcıya kısa biçimde bildirin.
+
+Bu akış Codex görevinin tamamlanma adımıdır; dosya kaydetmeyi dinleyen arka plan
+servisi veya zamanlanmış otomasyon değildir. Codex dışındaki düzenlemeler, sonraki
+ilgili Codex görevinde kapsam ve içerik kontrolünden sonra ele alınır.

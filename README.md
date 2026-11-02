@@ -25,6 +25,14 @@ runtime'ını veya otomatik çalışan bir senkronizasyon servisini kurmaz.
 
 ## Public paylaşım ve senkronizasyon
 
+Codex ile her geliştirme tamamlandığında, paylaşılabilir yönetim/skill değişiklikleri
+kontrol edilerek commit ve push yapılır. Kalıcı işlem adımları
+[AGENTS.md](AGENTS.md#geliştirme-sonunda-github-senkronizasyonu) içindedir. Yalnız
+CAD modelinin değişmesi public repoda yeni commit gerektirmez. Codex dışında dosya
+kaydetmek kendiliğinden push başlatmaz.
+
+Public hedef: [burakistikam/3D-modeling](https://github.com/burakistikam/3D-modeling).
+
 - Yalnız incelenmiş yönetim belgelerini ve skill dosyalarını ekleyin.
 - Kaynak çalışma alanını topluca kopyalamayın. Her güncellemede seçilen dosyaları
   karşılaştırın; kişisel yolları, kimlik bilgilerini ve göreve özel verileri çıkarın.
