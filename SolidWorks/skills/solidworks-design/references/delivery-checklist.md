@@ -42,3 +42,19 @@ revision; assumptions; unresolved items; and whether independent review occurred
 
 Use PASS only for verified applicable acceptance criteria. If blocked, identify the
 specific missing evidence. If no CAD change was made, state that explicitly.
+
+## Optional local evidence gate
+
+If an installed plugin requires a structured Worker/Reviewer record, report the
+same verified checks above as SOLIDWORKS_EVIDENCE with result, role, access,
+cad_path, rebuild_errors, rebuild_warnings, dirty, and active_configuration.
+For assemblies include component, visibility, transform, interference and hardware
+results. A Reviewer also reports independent_review=true and
+reviewer_changed_files=none. Missing evidence means FAIL or BLOCKED with a reason,
+not an invented passing value. A no-CAD review states cad_changes=none and why.
+
+For MCP-based CAD delivery, explicitly call rebuild_document,
+check_errors(rebuild_first=true), and get_active_document_info on the target.
+For a COM-only gate, print SOLIDWORKS_COM_EVIDENCE from separate readback, with
+the verified CAD path, errors, warnings, dirty state and active configuration.
+A local gate does not itself authorize spawning agents or changing CAD scope.

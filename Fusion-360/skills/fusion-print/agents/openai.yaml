@@ -1,0 +1,4 @@
+interface:
+  display_name: "Fusion Print"
+  short_description: "Run local Fusion Print recipes and inspect exports"
+  default_prompt: "Use $fusion-print to validate and run this local Fusion recipe."

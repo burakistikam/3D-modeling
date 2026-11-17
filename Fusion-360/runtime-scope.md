@@ -11,7 +11,7 @@ dosya IO ve custom event ile işi ana thread'e aktarır; CAD API çağrıları b
 çalışır. Tarif, CAD inspection ve başarılıysa F3D/STEP/STL ile görünüş çıktıları
 üretilir. STL denetimi Fusion dışında yapılır.
 
-Dosya kuyruğu güvenilen yerel kullanıcı ve checkout varsayar; bir sandbox veya
+Dosya kuyruğu güvenilen yerel kullanıcı ve runtime klasörü varsayar; bir sandbox veya
 çok kullanıcılı servis değildir. Tarif güvenilen Python kodudur. İçe aktarırken
 yan etki üretmemeli, çalıştırılmadan önce incelenmelidir.
 
@@ -28,7 +28,7 @@ yan etki üretmemeli, çalıştırılmadan önce incelenmelidir.
   Beklenen ölçüleri son çıktının kendisinden türetmeyin. İç geometriyi ayrıca ölçün.
 - Her iş kimliği en fazla bir kez çalıştırılır. Bekleme timeout'u CAD işlemini
   iptal etmez. Başlamış veya kesintiye uğramış işi otomatik yeniden göndermeyin.
-- Bir checkout için tek Fusion Print örneği varsayılır. Ortak runtime'ı çalışan
+- Bir yerel runtime kökü için tek Fusion Print örneği varsayılır. Ortak runtime'ı çalışan
   iş sırasında değiştirmeyin; aynı canlı modele paralel yazma göndermeyin.
 - Otomatik undo, kullanıcı belgesini kapatma, cloud save veya eski modeli silme
   standart akışın parçası değildir. Hata belgesini inceleme için koruyun.

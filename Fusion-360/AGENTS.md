@@ -2,14 +2,15 @@
 
 [Ortak kurallar](../AGENTS.md) geçerlidir. Yerel Fusion Print altyapısı kullanılıyorsa
 [runtime kapsamını](runtime-scope.md) okuyun. Bu public klasör runtime kodunu içermez;
-komutları kurulu altyapının repository kökünden çalıştırın.
+komutları repo dışındaki yerel runtime kökünden çalıştırın. Bağlantı ve kurulum
+[ortak rehberde](../connections.md), tarif/CLI akışı [Fusion Print skill](skills/fusion-print/SKILL.md) içindedir.
 
 ## Hazırlık ve modelleme
 
-- Canlı işlem öncesi `fusion-print doctor`, ardından `fusion-print ping` çalıştırın.
-  Heartbeat tek başına Fusion ana thread'inin yanıt verdiğini kanıtlamaz.
+- Kullanılan bağlantıyı açıkça belirleyin. Fusion Print için doctor ve ping akışı
+  skill'dedir; ayrı Fusion 360 MCP kullanılıyorsa onun durum/belge sorgusunu kullanın.
 - Yerel model işi `models/<parça>/model.json` ve `recipe.py` ile tanımlanır. Ölçüleri
-  önce kaydedin, `fusion-print validate models/<parça>/model.json` çalıştırın.
+  önce kaydedin, `fusion-print validate <parça>/model.json` çalıştırın.
   Bu görev dosyaları public yönetim reposuna senkronize edilmez.
 - Dış uzunluk birimi mm; Fusion `Point3D` uzunlukları cm, hacimler cm³'tür.
   Nokta oluştururken mm değerini 10'a bölün; ölçüm dönüşümünü açıkça yapın.

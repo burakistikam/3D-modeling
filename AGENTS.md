@@ -1,8 +1,22 @@
 # Ortak 3D modelleme çalışma kuralları
 
-Bu repository bağımsız CAD ve 3D modelleme görevleri için genel yönetim belgeleridir.
+Bu repository bağımsız CAD ve 3D modelleme görevlerinde ortak kurallar, skill'ler
+ve taşınabilir bağlantı bilgileri için tek kaynaktır.
 Önce [README.md](README.md), sonra hedef uygulamanın AGENTS.md dosyasını okuyun.
 Ortak kurallar burada, uygulamaya özgü ayrıntılar ilgili klasörde tutulur.
+
+## Kaynak ve yerel kurulum
+
+- Genel talimatları burada ve ilgili uygulama klasöründe birleştirin. Aynı kuralı
+  proje dosyasına veya ikinci bir skill varyantına kopyalamayın; kaynak dosyaya yönlendirin.
+- Yeni bilgi eklemeden önce mevcut yöntemle karşılaştırın. Tekrarları kaldırın,
+  çelişkileri güncel kullanıcı talebi ve gerçek araç davranışıyla çözün.
+- Bağlantı yöntemleri [connections.md](connections.md) içinde; gerçek komut yolları,
+  özel çıktı kökleri ve kimlik bilgileri yerel config'te tutulur.
+- Runtime kodu, sanal ortam, eklentiler, model/recipe, referans, export ve görev
+  kayıtları repo dışında kalır. Yerel çalışan altyapıyı ve özel verileri koruyun.
+- Yönetim kaynağını taşımak CAD/runtime taşımak değildir. Eski aktif yol bağımlılığını
+  kaldırırken kurulu bağlantıları ve kullanılan proje yönlendirmelerini doğrulayın.
 
 ## Görev ve oturum sınırı
 
@@ -53,8 +67,8 @@ Ortak kurallar burada, uygulamaya özgü ayrıntılar ilgili klasörde tutulur.
 
 ## Public repository sınırı
 
-- Bu repoya yalnız paylaşılması amaçlanan genel Markdown kuralları, skill içeriği
-  ve bunların kişisel veri içermeyen metadata dosyaları girer.
+- Bu repoya yalnız paylaşılması amaçlanan genel Markdown kuralları, skill içeriği,
+  taşınabilir bağlantı/kurulum tarifleri ve kişisel veri içermeyen metadata girer.
 - CAD/baskı dosyaları, müşteri/işveren bilgisi, kişisel ad/e-posta, özel ölçüler,
   ekran görüntüleri, oturum ve araç logları, mutlak makine yolları, özel sunucu
   adresleri, lisans/kimlik bilgileri, token ve API anahtarı eklemeyin.
@@ -76,7 +90,7 @@ yeniden onay istemeyin; kullanıcının güncel durdurma veya paylaşmama talebi
    Kaynak başka bir çalışma alanındaysa yalnız ilgili değişikliği public sürüme
    uyarlayın. Görevden yeni kalıcı tercih türetmeyin, klasörleri topluca kopyalamayın.
 2. Bu repo kökünde hedefi doğrulayın: `origin`, README'deki public GitHub reposu
-   olmalı. Kaynak CAD reposunun remote'unu değiştirmeyin ve oradan public push yapmayın.
+   olmalı. Özel CAD/runtime klasörünü public repo haline getirmeyin ve oradan push yapmayın.
 3. `git status` ve `git fetch origin` ile yerel/uzak durumu inceleyin. Başka kişilerin
    bekleyen değişikliklerini koruyun. Uzak değişiklikleri kayıpsız bütünleştirin;
    belirsiz çakışmada durumu bildirin. Force push veya veri kaybettiren reset yapmayın.
@@ -92,6 +106,9 @@ yeniden onay istemeyin; kullanıcının güncel durdurma veya paylaşmama talebi
    senkronizasyon tamamlandı deyin. Bağlantı, yetki veya çakışma nedeniyle gönderilemeyen
    değişiklikleri koruyun ve kullanıcıya kısa biçimde bildirin.
 
-Bu akış Codex görevinin tamamlanma adımıdır; dosya kaydetmeyi dinleyen arka plan
+Model, çıktı veya görev kaydı değişiklikleri bu akışı tetiklemez. Yalnız ortak
+kurallarda, skill'de veya bağlantı tarifinde gerekli bir değişiklik varsa güncelleyin.
+
+Bu akış kapsam dahilindeki değişikliğin tamamlanma adımıdır; dosya kaydetmeyi dinleyen arka plan
 servisi veya zamanlanmış otomasyon değildir. Codex dışındaki düzenlemeler, sonraki
 ilgili Codex görevinde kapsam ve içerik kontrolünden sonra ele alınır.
